@@ -14,6 +14,7 @@ export const MessageUsername = styled.p`
 export const Message = styled.p`
   display: flex;
   font-size: 14px;
+  justify-content: space-between;
 `;
 
 export const MessageHolder = styled.div`
