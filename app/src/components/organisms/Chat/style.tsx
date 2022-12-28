@@ -8,7 +8,8 @@ export const Container = styled.div`
 export const Top = styled.div``;
 
 export const Content = styled.div`
-  padding: 10px 10px;
+  width: 100%;
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -20,5 +21,5 @@ export const Content = styled.div`
   }
 `;
 export const Bottom = styled.div`
-  padding-top: 10px;
+  padding: 10px;
 `;

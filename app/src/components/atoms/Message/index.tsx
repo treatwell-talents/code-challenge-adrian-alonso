@@ -10,7 +10,7 @@ import { MessageProps } from "./types";
 
 export default ({ date, message, username }: MessageProps) => {
   const formatedTime = `${String(date.getHours()).padStart(2, "0")}:${String(
-    date.getMinutes(),
+    date.getMinutes()
   ).padStart(2, "0")}`;
 
   const firstLetter = username.charAt(0).toUpperCase();

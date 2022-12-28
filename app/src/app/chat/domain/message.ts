@@ -1,14 +1,14 @@
 import uuid from "react-uuid";
 
 interface CreateMessage {
+  readonly messageId?: string;
   readonly sended?: Date;
   readonly message: string;
   readonly author: string;
 }
 class Message {
-  private readonly messageId: string;
-
   private constructor(
+    private readonly messageId: string,
     private readonly sended: Date,
     private readonly message: string,
     private readonly author: string,
@@ -17,11 +17,12 @@ class Message {
   }
 
   static create({
+    messageId = uuid(),
     sended = new Date(),
     message,
     author,
   }: CreateMessage): Message {
-    return new Message(sended, message, author);
+    return new Message(messageId, sended, message, author);
   }
 
   getMessageId(): string {

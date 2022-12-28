@@ -4,7 +4,7 @@ import { ChatProps } from "./types";
 import ChatForm from "components/molecules/ChatForm";
 import Header from "components/molecules/Header";
 
-export default ({ messages }: ChatProps) => (
+export default ({ messages, write }: ChatProps) => (
   <Container>
     <Top>
       <Header />
@@ -20,7 +20,7 @@ export default ({ messages }: ChatProps) => (
       ))}
     </Content>
     <Bottom>
-      <ChatForm />
+      <ChatForm onSubmit={(text) => write(text)} />
     </Bottom>
   </Container>
 );

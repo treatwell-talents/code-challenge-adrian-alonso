@@ -12,6 +12,4 @@ const Template: ComponentStory<typeof ChatForm> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  label: "Username",
-};
+Default.args = {};

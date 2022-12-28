@@ -12,6 +12,4 @@ const Template: ComponentStory<typeof UsernameForm> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  label: "Username",
-};
+Default.args = {};

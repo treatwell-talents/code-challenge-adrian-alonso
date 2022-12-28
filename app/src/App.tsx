@@ -1,23 +1,16 @@
-import Button from "./components/atoms/Button";
+import useUser from "app/chat/ui/hooks/useUser.hook";
+import Login from "./app/chat/ui/pages/login";
+import Chat from "./app/chat/ui/pages/chat";
+import useMessages from "app/chat/ui/hooks/useMessages.hook";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button label="Empieza ya" />
-      </header>
-    </div>
+  const { isLogged, username, login } = useUser();
+  const { write, messages } = useMessages(username);
+
+  return !isLogged ? (
+    <Login login={login} />
+  ) : (
+    <Chat write={write} messages={messages} />
   );
 }
 
