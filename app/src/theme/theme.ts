@@ -7,6 +7,7 @@ export interface Theme {
     lightgrey: string;
     vividCyan: string;
     vividPurple: string;
+    orange: string;
   };
 }
 
@@ -23,6 +24,7 @@ const theme: Theme = {
     lightgrey: "#E6E8ED",
     vividCyan: "#0693e3",
     vividPurple: "#9b51e0",
+    orange: "#ff5c39",
   },
 };
 

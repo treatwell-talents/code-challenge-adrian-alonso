@@ -10,7 +10,7 @@ function App() {
   return !isLogged ? (
     <Login login={login} />
   ) : (
-    <Chat write={write} messages={messages} />
+    <Chat write={write} messages={messages} user={username as string} />
   );
 }
 

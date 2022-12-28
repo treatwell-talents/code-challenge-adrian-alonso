@@ -2,8 +2,7 @@ import CreateMessageUseCase from "app/chat/application/create-message/create-mes
 import GetMessagesUseCase from "app/chat/application/get-messages/get-message.usecase";
 import Message from "app/chat/domain/message";
 import LocalStorageMessageRepository from "app/chat/infrastructure/local-storage-message.repository";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const repository = new LocalStorageMessageRepository();
 

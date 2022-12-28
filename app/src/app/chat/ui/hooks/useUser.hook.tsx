@@ -1,8 +1,7 @@
 import GetSessionUseCase from "app/chat/application/get-session/get-session.usecase";
 import LoginUseCase from "app/chat/application/login/login.usecase";
 import SessionStorageLoginRepository from "app/chat/infrastructure/session-storage-login.repository";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const repository = new SessionStorageLoginRepository();
 

@@ -32,6 +32,9 @@ module.exports = {
       rules: {
         // Disabled because Typescript takes care of that already.
         "@typescript-eslint/no-unused-vars": "off",
+        // Custom rules disabled
+        "@typescript-eslint/no-misused-promises": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
         // This rule is enabled by eslint-config-airbnb and disabled by
         // eslint-plugin-prettier:
         // https://github.com/prettier/eslint-plugin-prettier/issues/65

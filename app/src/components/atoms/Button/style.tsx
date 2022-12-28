@@ -17,4 +17,10 @@ export const Button = styled.button`
     background: ${({ theme }: ThemeComponent) => theme.colors.blue400};
     border-color: ${({ theme }: ThemeComponent) => theme.colors.blue400};
   }
+
+  :disabled,
+  [disabled] {
+    background: ${({ theme }: ThemeComponent) => theme.colors.blue400};
+    border-color: ${({ theme }: ThemeComponent) => theme.colors.blue400};
+  }
 `;
