@@ -31,7 +31,7 @@ export default ({
   }, [isRecent]);
 
   return (
-    <Container $direction={direction}>
+    <Container $direction={direction} className={"message"}>
       <MessageHolder
         $color={direction === "left" ? "cyan" : "purple"}
         $isRecent={isRecent}
