@@ -10,18 +10,20 @@ export default ({ messages, user, write }: ChatProps) => {
 
   const scrollToBottom = (behaviour?: ScrollBehavior) => {
     const content = ref.current as unknown as HTMLElement;
-    content.scroll({
-      behavior: behaviour ?? "auto",
-      top: content.scrollHeight,
-    });
+    if (content) {
+      content.scroll({
+        behavior: behaviour ?? "auto",
+        top: content.scrollHeight,
+      });
+    }
   };
 
   const onSubmitChatForm = (text: string) => {
     write(text);
-    setTimeout(() => scrollToBottom("smooth"), 100);
+    setTimeout(() => scrollToBottom("smooth"));
   };
 
-  useEffect(() => scrollToBottom(), []);
+  useEffect(() => scrollToBottom(), [messages]);
 
   return (
     <Container>

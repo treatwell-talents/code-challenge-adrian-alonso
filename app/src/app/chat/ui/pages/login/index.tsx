@@ -1,11 +1,14 @@
 import UsernameForm from "components/molecules/UsernameForm";
 import { Form, LoginPage } from "./style";
-import { LoginProps } from "./types";
+import useChat from "app/chat/ui/hooks/useChat.hook";
 
-export default ({ login }: LoginProps) => (
-  <LoginPage>
-    <Form>
-      <UsernameForm onSubmit={(username) => login(username)} />
-    </Form>
-  </LoginPage>
-);
+export default () => {
+  const { login } = useChat();
+  return (
+    <LoginPage>
+      <Form>
+        <UsernameForm onSubmit={(username) => login(username)} />
+      </Form>
+    </LoginPage>
+  );
+};

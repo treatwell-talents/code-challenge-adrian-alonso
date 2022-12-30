@@ -28,7 +28,7 @@ export default ({
 
   useEffect(() => {
     isRecent && setTimeout(() => setRecent(false), RECENT_MESSAGE_TIME);
-  }, []);
+  }, [isRecent]);
 
   return (
     <Container $direction={direction}>

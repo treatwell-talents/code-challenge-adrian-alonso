@@ -14,8 +14,7 @@ export const Container = styled.div<ContainerProps>`
   display: inline-flex;
   gap: 5px;
   flex-direction: ${({ $direction }: ContainerProps) =>
-    $direction === "right" ? "row" : "row-reverse"};
-  justify-content: "flex-end";
+    $direction === "right" ? "row-reverse" : "row"};
 `;
 
 export const MessageUsername = styled.p`
